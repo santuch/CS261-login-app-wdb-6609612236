@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Login Page</title>
+        <link rel="stylesheet" href="css/styles.css" />
+    </head>
+    <body>
+        <div class="login-container">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <!-- Role Dropdown -->
+                <label for="role">Role:</label>
+                <select id="role" name="role" required>
+                    <option value="" disabled selected>Select your role</option>
+                    <option value="student">นักศึกษา (Student)</option>
+                    <option value="employee">บุคลากร (Employee)</option>
+                </select>
+
+                <!-- Username -->
+                <label for="username">Username:</label>
+                <input
+                    id="username"
+                    type="text"
+                    name="username"
+                    placeholder="Enter your username"
+                    required
+                />
+
+                <!-- Password -->
+                <div class="input-container">
+                    <input
+                        id="password"
+                        type="password"
+                        name="password"
+                        placeholder="Enter your password"
+                        required
+                    />
+                    <!-- Eye icon for toggling password visibility -->
+                    <img
+                        id="togglePassword"
+                        class="toggle-password"
+                        src="image/eye-view-interface-symbol-svgrepo-com.svg"
+                        alt="Show Password"
+                    />
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit">Login</button>
+            </form>
+
+            <!-- Success Message and User Details Display -->
+            <div
+                id="successMessage"
+                class="success-container"
+                style="display: none"
+            >
+                <h3>Success</h3>
+                <p id="userDetails"></p>
+            </div>
+        </div>
+
+        <script src="js/script.js"></script>
+    </body>
+</html>
